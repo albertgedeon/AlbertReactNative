@@ -12,7 +12,6 @@ class FlatListItem extends React.Component {
     return (
         <TouchableHighlight
         onPress={() => {
-            console.log(this.props.item.company_name)
             this.props.navigation.push('Details', { company:this.props.item })
         }}
         underlayColor='yellow'>

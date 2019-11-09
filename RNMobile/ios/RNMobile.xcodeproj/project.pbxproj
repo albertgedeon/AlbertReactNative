@@ -20,6 +20,8 @@
 		3980BFA622FB3D518755CC3D /* libPods-RNMobile-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD19A20F2CA3006D20F6D97 /* libPods-RNMobile-tvOSTests.a */; };
 		9C94E09D45E2F2B0BA97A0D8 /* libPods-RNMobile-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89667769BEB2691C1867F5CB /* libPods-RNMobile-tvOS.a */; };
 		C72FD3B2EC683404D17848AF /* libPods-RNMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B481D04B7627DB2603D4D6E /* libPods-RNMobile.a */; };
+		CC20635923768A6C008661FD /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC20635823768A6C008661FD /* GraphView.swift */; };
+		CCD06271237774AF00022D02 /* GraphViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD06270237774AF00022D02 /* GraphViewManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,9 @@
 		8B481D04B7627DB2603D4D6E /* libPods-RNMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2382E25BFFB169EB93B8C66 /* libPods-RNMobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNMobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD19A20F2CA3006D20F6D97 /* libPods-RNMobile-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNMobile-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC20635823768A6C008661FD /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		CC8B79F3237626DA0039EDE1 /* RNMobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNMobile-Bridging-Header.h"; sourceTree = "<group>"; };
+		CCD06270237774AF00022D02 /* GraphViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraphViewManager.m; sourceTree = "<group>"; };
 		E3AFFC99FBE4A084DAF510F8 /* Pods-RNMobile-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNMobile-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-RNMobile-tvOSTests/Pods-RNMobile-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		E63DA3322048A73ADA5D1E05 /* Pods-RNMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-RNMobileTests/Pods-RNMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -132,6 +137,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				CC8B79F3237626DA0039EDE1 /* RNMobile-Bridging-Header.h */,
+				CC20635823768A6C008661FD /* GraphView.swift */,
+				CCD06270237774AF00022D02 /* GraphViewManager.m */,
 			);
 			name = RNMobile;
 			sourceTree = "<group>";
@@ -194,7 +202,6 @@
 				E63DA3322048A73ADA5D1E05 /* Pods-RNMobileTests.debug.xcconfig */,
 				50ACC40F42096F9462BDFBC8 /* Pods-RNMobileTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -290,14 +297,22 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = XCWK73256Y;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = XCWK73256Y;
+						LastSwiftMigration = 1120;
+						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = XCWK73256Y;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = XCWK73256Y;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
 					};
@@ -308,6 +323,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -528,6 +544,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC20635923768A6C008661FD /* GraphView.swift in Sources */,
+				CCD06271237774AF00022D02 /* GraphViewManager.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -582,7 +600,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E63DA3322048A73ADA5D1E05 /* Pods-RNMobileTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = XCWK73256Y;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -605,8 +625,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 50ACC40F42096F9462BDFBC8 /* Pods-RNMobileTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = XCWK73256Y;
 				INFOPLIST_FILE = RNMobileTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -626,8 +648,12 @@
 			baseConfigurationReference = 05A29123124108DA51160B4C /* Pods-RNMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = XCWK73256Y;
 				INFOPLIST_FILE = RNMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -635,8 +661,12 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amg.RNMobile;
 				PRODUCT_NAME = RNMobile;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "RNMobile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -646,7 +676,11 @@
 			baseConfigurationReference = 705A32142A7AE4FD7FFF806F /* Pods-RNMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XCWK73256Y;
 				INFOPLIST_FILE = RNMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -654,8 +688,11 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amg.RNMobile;
 				PRODUCT_NAME = RNMobile;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "RNMobile-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -671,6 +708,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = XCWK73256Y;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNMobile-tvOS/Info.plist";
@@ -680,7 +718,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.RNMobile-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amg.RNMobile-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -700,6 +738,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = XCWK73256Y;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNMobile-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -708,7 +747,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.RNMobile-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amg.RNMobile-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -726,6 +765,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = XCWK73256Y;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNMobile-tvOSTests/Info.plist";
@@ -754,6 +794,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = XCWK73256Y;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNMobile-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
