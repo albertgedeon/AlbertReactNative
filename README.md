@@ -2,12 +2,19 @@
 
 How to run project
 
-Run instructions for iOS:
-    • cd AlbertReactNative/RNMobile && react-native run-ios
-    - or -
-    • Open RNMobile/ios/RNMobile.xcworkspace in Xcode or run "xed -b ios"
-    • Hit the Run button
+First Install packages
 
-  Run instructions for Android:
-    • Have an Android emulator running (quickest way to get started), or a device connected.
-    • cd AlbertReactNative/RNMobile && react-native run-android
+cd  AlbertReactNative/RNMobile
+npm install
+cd ios
+pod install
+
+Run instructions for iOS:
+
+cd AlbertReactNative/RNMobile
+react-native run-ios
+
+or
+Open RNMobile/ios/RNMobile.xcworkspace in Xcode or run "xed -b ios" and Hit the Run button
+
+This project does not have a graphing package/native module for Android
