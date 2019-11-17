@@ -1,6 +1,6 @@
 # AlbertReactNative
 
-How to run project
+How to run project my first React Native project
 
 First Install packages
 
