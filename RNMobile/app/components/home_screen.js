@@ -2,10 +2,9 @@ import React from 'react';
 import {
     FlatList,
     StyleSheet,
-    Text,
+    SafeAreaView,
     View,
     ActivityIndicator,
-    TouchableHighlight
 } from 'react-native';
 import NetworkRequest from '../services/network_request';
 import FlatListItem from './flat_list_item';
@@ -13,7 +12,7 @@ import FlatListItem from './flat_list_item';
 export default class HomeScreen extends React.Component {
     static navigationOptions = {
         title: 'Companies',
-      };
+    };
 
     constructor(props) {
         super(props)
@@ -36,19 +35,23 @@ export default class HomeScreen extends React.Component {
     render() {
         if (this.state.loading) {
             return (
-                <View style={[styles.activityIndicatorContainer, styles.horizontal]}>
-                    <ActivityIndicator size="large" color="#0000ff" />
-                </View>
+                <SafeAreaView>
+                    <View style={[styles.activityIndicatorContainer, styles.horizontal]}>
+                        <ActivityIndicator size="large" color="#0000ff" />
+                    </View>
+                </SafeAreaView>
             )
         }
         else {
             return (
-                <FlatList
-                    data={this.state.dataSource}
-                    ItemSeparatorComponent={this.FlatListItemSeparator}
-                    renderItem = {({ item }) => <FlatListItem item={item}/>}
-                    keyExtractor={item => item.id.toString(10)}
-                />
+                <SafeAreaView>
+                    <FlatList
+                        data={this.state.dataSource}
+                        ItemSeparatorComponent={this.FlatListItemSeparator}
+                        renderItem={({ item }) => <FlatListItem item={item} />}
+                        keyExtractor={item => item.id.toString(10)}
+                    />
+                </SafeAreaView>
             );
         }
     }
